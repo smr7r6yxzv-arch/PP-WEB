@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <div className="min-h-screen bg-white text-neutral-900">
-      {/* TOP BANNER */}
+      {/* TOP BANNER (sticky) */}
       <div className="w-full bg-emerald-600 text-white text-center py-3 px-4 sticky top-0 z-50 shadow">
         <div className="max-w-6xl mx-auto font-extrabold text-lg md:text-xl">
           🚀 Go-Live in <span className="underline decoration-white/70">48 Stunden</span> — oder die ersten <span className="underline decoration-white/70">3 Monate GRATIS*</span>
@@ -59,8 +59,90 @@ export default function Page() {
         </div>
       </section>
 
+      {/* SERVICES */}
+      <section id="services" className="border-t bg-neutral-50 scroll-mt-28">
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <h2 className="text-2xl md:text-3xl font-bold">Unsere Services</h2>
+          <p className="mt-2 text-neutral-600">Modular buchbar – starten Sie klein und erweitern Sie bei Bedarf.</p>
+          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-neutral-700">
+            <div className="rounded-3xl border p-5 bg-white"><div className="font-semibold">WhatsApp Text-to-Book</div><p>Buchungen im Chat. Google/Cal.com Integration, Erinnerungen, Umbuchung.</p></div>
+            <div className="rounded-3xl border p-5 bg-white"><div className="font-semibold">Speed-to-Lead</div><p>Website-Anfragen in 30s beantworten (WhatsApp/SMS/E-Mail). Mehr Abschlüsse.</p></div>
+            <div className="rounded-3xl border p-5 bg-white"><div className="font-semibold">Social DM Agents</div><p>Instagram/FB DMs automatisch qualifizieren & Termine vergeben.</p></div>
+            <div className="rounded-3xl border p-5 bg-white"><div className="font-semibold">AI Receptionist</div><p>Telefon-Assistent nimmt Anrufe an, beantwortet FAQs & bucht.</p></div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRICING */}
+      <section id="pricing" className="border-t scroll-mt-28">
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <h2 className="text-2xl md:text-3xl font-bold">Preise</h2>
+          <p className="mt-2 text-neutral-600">Transparente Pakete. Monatlich kündbar.</p>
+          <div className="mt-8 grid md:grid-cols-3 gap-6">
+            <div className="rounded-3xl border p-6">
+              <div className="text-lg font-semibold">Starter</div>
+              <div className="text-4xl font-extrabold">199€<span className="text-base font-normal text-neutral-500">/Mon</span></div>
+              <ul className="mt-3 text-sm text-neutral-700 space-y-1">
+                <li>✅ WhatsApp Buchung</li>
+                <li>✅ 1 Kalender</li>
+                <li>✅ Erinnerungen 24h/2h</li>
+              </ul>
+              <a href="#contact" className="block mt-4 w-full text-center rounded-2xl bg-black text-white py-2">Anfragen</a>
+              <div className="mt-2 text-xs text-neutral-500">+ Einmalig 499€ Setup</div>
+            </div>
+            <div className="rounded-3xl border-2 border-amber-300 p-6 shadow">
+              <div className="text-lg font-semibold">Growth</div>
+              <div className="text-4xl font-extrabold">349€<span className="text-base font-normal text-neutral-500">/Mon</span></div>
+              <ul className="mt-3 text-sm text-neutral-700 space-y-1">
+                <li>✅ + Speed-to-Lead</li>
+                <li>✅ Review-Booster</li>
+                <li>✅ Reporting</li>
+              </ul>
+              <a href="#contact" className="block mt-4 w-full text-center rounded-2xl bg-black text-white py-2">Anfragen</a>
+              <div className="mt-2 text-xs text-neutral-500">+ Einmalig 799€ Setup</div>
+            </div>
+            <div className="rounded-3xl border p-6">
+              <div className="text-lg font-semibold">Pro</div>
+              <div className="text-4xl font-extrabold">599€<span className="text-base font-normal text-neutral-500">/Mon</span></div>
+              <ul className="mt-3 text-sm text-neutral-700 space-y-1">
+                <li>✅ + DM-Agent (IG/FB)</li>
+                <li>✅ Kampagnen-Flows</li>
+                <li>✅ 2h Tuning/Mon</li>
+              </ul>
+              <a href="#contact" className="block mt-4 w-full text-center rounded-2xl bg-black text-white py-2">Anfragen</a>
+              <div className="mt-2 text-xs text-neutral-500">+ Einmalig 1.200€ Setup</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="border-t scroll-mt-28">
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <h2 className="text-2xl md:text-3xl font-bold">Häufige Fragen</h2>
+          <div className="mt-6 grid md:grid-cols-2 gap-6 text-sm text-neutral-700">
+            <div>
+              <div className="font-semibold">Brauche ich eine neue Nummer?</div>
+              <p>Nein. Sie können Ihre bestehende WhatsApp-Business-Nummer verwenden oder wir richten eine neue ein.</p>
+            </div>
+            <div>
+              <div className="font-semibold">Ist das DSGVO-konform?</div>
+              <p>Ja. Wir nutzen offizielle WhatsApp-Schnittstellen. Opt-out („Stop“), Auftragsverarbeitung & Löschkonzept sind inkludiert.</p>
+            </div>
+            <div>
+              <div className="font-semibold">Arbeitet das mit Google Kalender?</div>
+              <p>Ja. Termine können live geprüft, gebucht, erinnert und umgebucht werden.</p>
+            </div>
+            <div>
+              <div className="font-semibold">Wie schnell sind wir live?</div>
+              <p>In der Regel <b>innerhalb von 24 Stunden</b> nach Vorlagen-Freigabe durch Meta (WhatsApp) – meist schneller.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT */}
-      <section id="contact" className="border-t bg-neutral-50">
+      <section id="contact" className="border-t bg-neutral-50 scroll-mt-28">
         <div className="max-w-6xl mx-auto px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-bold">Kontakt & Demo</h2>
           <p className="mt-2 text-neutral-600">Schreiben Sie uns auf WhatsApp oder per E-Mail. Wir antworten in wenigen Minuten.</p>
@@ -73,7 +155,35 @@ export default function Page() {
         </div>
       </section>
 
-      {/* LEGAL (Kurz) */}
+      {/* LEGAL */}
+      <section id="impressum" className="border-t bg-white scroll-mt-28">
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <h2 className="text-2xl md:text-3xl font-bold">Impressum</h2>
+          <div className="mt-4 text-sm text-neutral-700 space-y-2">
+            <p><b>Firma:</b> PE-Automations</p>
+            <p><b>Inhaber:</b> Patrick Edinger</p>
+            <p><b>Anschrift:</b> Marburggasse 21, 1220 Wien, Österreich</p>
+            <p><b>Telefon:</b> +43 664 422 5506</p>
+            <p><b>E-Mail:</b> pr_edinger@hotmail.com</p>
+            <p><b>Unternehmensgegenstand:</b> IT-Dienstleistungen, Automatisierung von Kommunikations- und Buchungssystemen</p>
+            <p><b>UID-Nr.:</b> 12 895/7347</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="datenschutz" className="border-t bg-neutral-50 scroll-mt-28">
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <h2 className="text-2xl md:text-3xl font-bold">Datenschutzerklärung (Kurzfassung)</h2>
+          <div className="mt-4 text-sm text-neutral-700 space-y-3">
+            <p>Wir verarbeiten personenbezogene Daten ausschließlich zur Bearbeitung von Anfragen und Terminbuchungen (Art. 6 Abs. 1 lit. b/f DSGVO).</p>
+            <p><b>WhatsApp Business:</b> Nutzung offizieller Schnittstellen (Meta). Alternativen: E-Mail/Telefon.</p>
+            <p><b>Speicherdauer:</b> Nur solange erforderlich bzw. gesetzlich geboten.</p>
+            <p><b>Rechte:</b> Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch. Kontakt: pr_edinger@hotmail.com</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
       <footer className="border-t">
         <div className="max-w-6xl mx-auto px-4 py-10 text-sm text-neutral-500">
           <div className="flex flex-wrap items-center justify-between gap-4">
