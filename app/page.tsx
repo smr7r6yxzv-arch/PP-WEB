@@ -1,3 +1,5 @@
+import Reviews from "./components/Reviews";
+
 export default function Page() {
   return (
     <div className="min-h-screen bg-white text-neutral-900">
@@ -115,6 +117,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+<Reviews />
 
       {/* ⭐ Kundenrezensionen Sektion */}
 <section id="reviews" className="py-20 bg-white text-gray-800">
