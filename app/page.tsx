@@ -116,6 +116,61 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ⭐ Kundenrezensionen Sektion */}
+<section id="reviews" className="py-20 bg-white text-gray-800">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-4xl font-bold text-emerald-600 mb-10">⭐ Kundenrezensionen</h2>
+
+    <div className="relative">
+      {/* Slider Container */}
+      <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-6 pb-4">
+        {[
+          { name: "Tobias K.", text: "Der WhatsApp-Bot hat meine Terminbuchungen verdoppelt! Keine No-Shows mehr. Mega!", rating: 5 },
+          { name: "Sabrina M.", text: "Ich war skeptisch, aber nach 2 Wochen habe ich schon ca. 20% mehr Buchungen. Top Service!", rating: 5 },
+          { name: "Lukas F.", text: "Schnelle Einrichtung, super Support und wirklich professionell. Sehr zu empfehlen.", rating: 5 },
+          { name: "Marlene R.", text: "Unsere Kunden lieben es, einfach per WhatsApp zu buchen. Spart uns jeden Tag mega Zeit!", rating: 5 },
+          { name: "Jonas P.", text: "Innerhalb von 48 Stunden online – genau wie versprochen. Klare Empfehlung!", rating: 5 },
+          { name: "Denise H.", text: "Endlich keine Terminausfälle mehr. Funktioniert perfekt!", rating: 5 },
+          { name: "Patrick L.", text: "Wir dachten, KI sei kompliziert, aber das hier ist echt sicher und schnell umgesetzt.", rating: 5 },
+        ].map((review, i) => (
+          <div
+            key={i}
+            className="min-w-[300px] md:min-w-[350px] bg-gray-50 border border-emerald-200 rounded-2xl p-6 snap-center shadow-sm hover:shadow-lg transition-shadow duration-300"
+          >
+            <div className="flex justify-center mb-3">
+              {Array(review.rating)
+                .fill(0)
+                .map((_, idx) => (
+                  <span key={idx} className="text-yellow-400 text-xl">★</span>
+                ))}
+            </div>
+            <p className="text-gray-700 italic mb-4">"{review.text}"</p>
+            <h4 className="text-emerald-700 font-semibold">{review.name}</h4>
+          </div>
+        ))}
+      </div>
+
+      {/* Pfeile */}
+      <button
+        onClick={() =>
+          document.querySelector("#reviews .flex")?.scrollBy({ left: -350, behavior: "smooth" })
+        }
+        className="absolute left-0 top-1/2 -translate-y-1/2 bg-emerald-500 text-white p-2 rounded-full shadow-md hover:bg-emerald-600 transition hidden md:block"
+      >
+        ‹
+      </button>
+      <button
+        onClick={() =>
+          document.querySelector("#reviews .flex")?.scrollBy({ left: 350, behavior: "smooth" })
+        }
+        className="absolute right-0 top-1/2 -translate-y-1/2 bg-emerald-500 text-white p-2 rounded-full shadow-md hover:bg-emerald-600 transition hidden md:block"
+      >
+        ›
+      </button>
+    </div>
+  </div>
+</section>
+
       {/* FAQ */}
       <section id="faq" className="border-t scroll-mt-28">
         <div className="max-w-6xl mx-auto px-4 py-16">
