@@ -36,6 +36,7 @@ export default function Page() {
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#services" className="hover:opacity-70">Services</a>
+            <a href="#how" className="hover:opacity-70">So funktioniert’s</a>
             <a href="#pricing" className="hover:opacity-70">Preise</a>
             <a href="#reviews" className="hover:opacity-70">Rezensionen</a>
             <a href="#faq" className="hover:opacity-70">FAQ</a>
@@ -101,6 +102,30 @@ export default function Page() {
           </div>
         </div>
       </section>
+      {/* HOW IT WORKS – smart Handoff nach 2 Fehlversuchen */}
+<section id="how" className="border-t bg-neutral-50 scroll-mt-40">
+  <div className="max-w-6xl mx-auto px-4 py-16">
+    <h2 className="text-2xl md:text-3xl font-bold">So funktioniert’s</h2>
+    <ol className="mt-6 grid md:grid-cols-3 gap-6 text-sm text-neutral-700">
+      <li className="rounded-2xl border bg-white p-5">
+        <b>1) Anfrage</b><br/>
+        Kund:in fragt per WhatsApp: „Mo 14:00 frei?“
+      </li>
+      <li className="rounded-2xl border bg-white p-5">
+        <b>2) Check & Vorschläge</b><br/>
+        Bot prüft Kalender → frei = bucht. Sonst: 2–3 Alternativen.
+      </li>
+      <li className="rounded-2xl border bg-white p-5">
+        <b>3) Smarter Handoff</b><br/>
+        Nach 2 erfolglosen Runden sendet der Bot automatisch den
+        <b> Kalender-Link</b>, damit sich der/die Kund:in selbst einen Slot wählt.
+      </li>
+    </ol>
+    <div className="mt-6 text-sm text-neutral-600">
+      Funktioniert mit Cal.com oder Google Kalender und kann bestehende Salon-Software ergänzen (kein Systemwechsel nötig).
+    </div>
+  </div>
+</section>
 
       {/* PRICING */}
       <section id="pricing" className="border-t bg-neutral-50 scroll-mt-40">
@@ -191,7 +216,12 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-bold">Häufige Fragen</h2>
         <div className="mt-6 grid md:grid-cols-2 gap-6 text-sm text-neutral-700">
-            <div><div className="font-semibold">Brauche ich eine neue Nummer?</div><p>Nein. Sie können Ihre bestehende WhatsApp-Business-Nummer verwenden oder wir richten eine neue ein.</p></div>
+            <div><div className="font-semibold">Brauche ich eine neue Nummer?</div><p><p>
+  Empfehlung: Eure aktuelle WhatsApp-Nummer bleibt wie sie ist. Für die Automatisierung richten wir eine
+  <b> zweite Nummer</b> als digitale „Rezeption“ ein – so könnt ihr risikofrei testen.
+  Eine Migration der bestehenden Nummer in die WhatsApp Business API ist <b>optional</b> möglich.
+</p>
+</p></div>
             <div><div className="font-semibold">Ist das DSGVO-konform?</div><p>Ja. Offizielle WhatsApp-Schnittstellen, Opt-out („Stop“), AV-Verträge & Löschkonzept.</p></div>
             <div><div className="font-semibold">Arbeitet das mit Google Kalender?</div><p>Ja. Termine können live geprüft, gebucht, erinnert und umgebucht werden.</p></div>
             <div><div className="font-semibold">Wie schnell sind wir live?</div><p>In der Regel <b>innerhalb von 24 Stunden</b> nach Vorlagen-Freigabe durch Meta (WhatsApp).</p></div>
